@@ -1,0 +1,66 @@
+@import 'styles/utils.scss';
+
+.menu-back {
+  background-color: black;
+
+  height: 100px;
+  width: 100%;
+  -ms-user-select: none;
+  -moz-user-select: -moz-none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  user-select:none;
+
+  .menu-context {
+    color: white;
+
+    .menu-kayin {
+      font-size: 50px;
+      float: left;
+      margin-left: 50px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    .under-menu {
+      font-size: 40px;
+
+      padding-top: 20px;
+
+      .about-menu {
+        float: right;
+        margin-right: 50px;
+      }
+      .work-menu {
+        float: right;
+        margin-right: 50px;
+      }
+    }
+  }
+}
+
+
+.menu-back {
+  /* Set rules to fill background */
+  min-height: 100px;
+  min-width: 1024px;
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+@media screen and (max-width: 1024px) {
+   /* Specific to this particular image */
+  .under-menu {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+  }
+
+}

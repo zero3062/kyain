@@ -1,5 +1,10 @@
 @import 'styles/utils.scss';
 
+.link {
+  text-decoration: none;
+  color: white;
+}
+
 .menu-back {
   background-color: black;
 
@@ -14,18 +19,28 @@
   .menu-context {
     color: white;
 
+
+
     .menu-kayin {
       font-size: 50px;
       float: left;
       margin-left: 50px;
       margin-top: 10px;
-      cursor: pointer;
     }
 
     .under-menu {
       font-size: 40px;
 
       padding-top: 20px;
+
+      .menubar {
+        width: 40px;
+        height: 40px;
+        float: right;
+        margin-top: 10px;
+        margin-right: 50px;
+        display: none;
+      }
 
       .about-menu {
         float: right;
@@ -38,7 +53,6 @@
     }
   }
 }
-
 
 .menu-back {
   /* Set rules to fill background */
@@ -53,14 +67,19 @@
   left: 0;
 }
 @media screen and (max-width: 1024px) {
+
    /* Specific to this particular image */
-  .under-menu {
-    position: absolute !important;
+  .about-menu, .work-menu {
+    position: absolute;
     width: 1px;
     height: 1px;
     overflow: hidden;
     clip: rect(1px 1px 1px 1px);
     clip: rect(1px, 1px, 1px, 1px);
   }
-
+  .menubar{
+    display: block !important;
+    position: absolute;
+    right: 25%;
+  }
 }

@@ -1,6 +1,12 @@
 @import 'styles/utils.scss';
 
 .home-back {
+  -ms-user-select: none;
+  -moz-user-select: -moz-none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  user-select:none;
+
   background: url('./../../images/death.jpg') no-repeat center center fixed;
   background-position: top;
   -webkit-background-size: cover;

@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import styles from './MainHome.scss';
-import { Link } from "react-router-dom";
 import classNames from 'classnames/bind';
 
 const cx = classNames.bind(styles);

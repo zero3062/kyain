@@ -19,8 +19,6 @@
   .menu-context {
     color: white;
 
-
-
     .menu-kayin {
       font-size: 50px;
       float: left;
@@ -33,13 +31,19 @@
 
       padding-top: 20px;
 
-      .menubar {
+      .menubar-div {
         width: 40px;
         height: 40px;
         float: right;
         margin-top: 10px;
         margin-right: 50px;
         display: none;
+      }
+      .menubar {
+        width: 40px;
+        height: 40px;
+        display: none;
+        cursor: pointer;
       }
 
       .about-menu {
@@ -77,8 +81,78 @@
     clip: rect(1px 1px 1px 1px);
     clip: rect(1px, 1px, 1px, 1px);
   }
+  .menubar-div {
+    display: block !important;
+    position: absolute;
+    right: 25%;
+  }
   .menubar{
     display: block !important;
+    position: absolute;
+    right: 25%;
+  }
+}
+
+
+.short-back {
+  background-color: black;
+
+  height: 100%;
+  width: 100%;
+  -ms-user-select: none;
+  -moz-user-select: -moz-none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  user-select:none;
+  color: white;
+
+  .cross-div {
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
+    margin-right: 40px;
+    float: right;
+
+    .cross {
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+    }
+  }
+  .hidden {
+    margin-top: 250px;
+    height: 500px;
+
+    .hidden-work, .hidden-about {
+      font-size: 50px;
+      position: relative;
+      left: 30%;
+      margin-top: 50px;
+    }
+  }
+}
+.short-back {
+  /* Set rules to fill background */
+  min-height: 100px;
+  min-width: 1024px;
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 1024px) {
+
+   /* Specific to this particular image */
+  .cross-div {
+    display: block !important;
+    position: absolute;
+    right: 25%;
+  }
+  .cross{
     position: absolute;
     right: 25%;
   }

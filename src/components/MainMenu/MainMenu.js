@@ -32,7 +32,7 @@ class MainMenu extends Component {
               <div className={cx('cross-div')} onClick={this.handleClickCross}><img src={cross} alt="cross" className={cx('cross')}/></div>
               <div className={cx('hidden')}>
                 <div className={cx('hidden-about')}><Link to="/about" className={cx('link')}>About</Link></div>
-                <div className={cx('hidden-work')}>Work</div>
+                <div className={cx('hidden-work')}><Link to="/work" className={cx('link')}>Work</Link></div>
               </div>
             </div>
             :
@@ -41,7 +41,7 @@ class MainMenu extends Component {
                 <div className={cx('menu-kayin')}><Link to="/" className={cx('link')}>Kayin</Link></div>
                 <div className={cx('under-menu')}>
                   <div className={cx('menubar-div')} onClick={this.handleClickMenubar}><img src={menubar} alt="menubar" className={cx('menubar')}/></div>
-                  <div className={cx('work-menu')}>Work</div>
+                  <div className={cx('work-menu')}><Link to="/work" className={cx('link')}>Work</Link></div>
                   <div className={cx('about-menu')}><Link to="/about" className={cx('link')}>About</Link></div>
                 </div>
               </div>

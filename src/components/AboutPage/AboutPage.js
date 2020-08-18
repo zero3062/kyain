@@ -32,22 +32,27 @@ class AboutPage extends Component {
 
     const kr = this.state.kr;
 
-    let isTitle = null;
-    let isText = null;
-    if(kr) {
-      isTitle = "블로그 소개";
-      isText = textKR;
-    } else {
-      isTitle = "About";
-      isText = textEN;
-    }
+    let isTitle = kr == true ? "블로그 소개" : "About";
+    let isText = kr == true ? textKR : textEN;
+    let isKRColor = kr == true ? "rgba(153, 153, 153, 0.7)" : "rgba(44, 40, 45, 0.7)";
+    let isENColor = kr == true ? "rgba(44, 40, 45, 0.7)" : "rgba(153, 153, 153, 0.7)";
+
+
+    // if(kr) {
+    //   isTitle = "블로그 소개";
+    //   isText = textKR;
+    //
+    // } else {
+    //   isTitle = "About";
+    //   isText = textEN;
+    // }
 
     return (
       <div className={cx('about-back')}>
         <div className={cx('about-contents')}>
           <div className={cx('language')}>
-            <div className={cx('EN')} onClick={this.handleEn}>EN</div>
-            <div className={cx('KR')} onClick={this.handleKr}>KR</div>
+            <div style={{backgroundColor: isENColor}} className={cx('EN')} onClick={this.handleEn}>EN</div>
+            <div style={{backgroundColor: isKRColor}} className={cx('KR')} onClick={this.handleKr}>KR</div>
           </div>
           <div className={cx('contents-box')}>
             <div className={cx('contents-title-KR')}>{isTitle}</div>

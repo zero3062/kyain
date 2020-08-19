@@ -22,6 +22,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 1200px;
+    height: 510px;
     background-color: rgba(0, 0, 0, 0.8);
 
     .work-maintitle {
@@ -29,6 +30,18 @@
       font-size: 40px;
       padding-bottom: 10px;
       border-bottom: 1px solid white;
+
+      .work-add {
+        float: right;
+        margin-top: -45px;
+        margin-right: 50px;
+        background-color: rgba(44, 40, 45, 0.7);
+        font-size: 20px;
+        border: none;
+        color: white;
+        padding: 7px 20px;
+        outline: none;
+      }
     }
 
     .work-listBox {
@@ -50,4 +63,19 @@
   position: fixed;
   top: 0;
   left: 0;
+}
+
+
+@media screen and (max-width: 1024px) {
+   /* Specific to this particular image */
+   .work-back{
+     left: 50%;
+     margin-left: -512px;
+
+     .work-contents {
+       position: absolute;
+       width: 720px;
+       margin-top: 40px;
+     }
+   }
 }

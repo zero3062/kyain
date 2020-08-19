@@ -34,8 +34,8 @@ class AboutPage extends Component {
 
     let isTitle = kr == true ? "블로그 소개" : "About";
     let isText = kr == true ? textKR : textEN;
-    let isKRColor = kr == true ? "rgba(153, 153, 153, 0.7)" : "rgba(44, 40, 45, 0.7)";
-    let isENColor = kr == true ? "rgba(44, 40, 45, 0.7)" : "rgba(153, 153, 153, 0.7)";
+    let isKRColor = kr == true ? "rgba(69, 69, 69, 0.99)" : "rgba(44, 40, 45, 0.7)";
+    let isENColor = kr == true ? "rgba(44, 40, 45, 0.7)" : "rgba(69, 69, 69, 0.99)";
 
 
     // if(kr) {

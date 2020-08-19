@@ -8,6 +8,15 @@
   .workItem-contents {
     margin-left: 20px;
     margin-top: 20px;
+    width: 900px;
+    float: "left";
+    padding-top: 20px;
+
+    .workItem-title {
+      font-size: 20;
+      font-weight: "bold";
+      margin-bottom: 7px;
+    }
 
     .workItem-text {
       overflow: hidden;
@@ -22,8 +31,20 @@
   }
 
   .workItem-img {
-    margin-top: 15px;
+    height: 90px;
+    width: auto;
     float: right;
+    margin-top: -70px;
     margin-right: 20px;
   }
+}
+@media screen and (max-width: 1024px) {
+   /* Specific to this particular image */
+   .workItem-back{
+     width: 620px;
+
+     .workItem-contents {
+       width: 420px;
+     }
+   }
 }

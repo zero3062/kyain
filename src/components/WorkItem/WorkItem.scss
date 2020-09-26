@@ -16,6 +16,13 @@
       font-size: 20;
       font-weight: "bold";
       margin-bottom: 7px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      -webkit-box-orient: vertical;
+      word-wrap:break-word;
     }
 
     .workItem-text {

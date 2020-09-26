@@ -1,55 +1,59 @@
-import React, {Component} from 'react';
+import React, { useState } from 'react';
+import { useHistory } from "react-router-dom";
 import styles from './MainMenu.scss';
-import { Link } from "react-router-dom";
 import classNames from 'classnames/bind';
 import menubar from './../../images/menubar.png';
 import cross from './../../images/cross.png';
 
-
 const cx = classNames.bind(styles);
 
-class MainMenu extends Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      menubar: false,
-    }
+const MainMenu = () => {
+  let history = useHistory();
+
+  const [menuBar, setMenuBar] = useState(false);
+
+  const onClickKayin = () => {
+    history.push({
+       pathname: '/',
+    })
   }
 
-  handleClickMenubar = () => {
-    this.setState({menubar: true});
+  const onClickAbout = () => {
+    history.push({
+       pathname: '/about',
+    })
   }
 
-  handleClickCross = () => {
-    this.setState({menubar: false});
+  const onClickWork = () => {
+    history.push({
+       pathname: '/work',
+    })
   }
 
-  render() {
-    return (
-      <div>
-        { this.state.menubar === true ?
-            <div className={cx('short-back')}>
-              <div className={cx('cross-div')} onClick={this.handleClickCross}><img src={cross} alt="cross" className={cx('cross')}/></div>
-              <div className={cx('hidden')}>
-                <div className={cx('hidden-about')}><Link to="/about" className={cx('link')}>About</Link></div>
-                <div className={cx('hidden-work')}><Link to="/work" className={cx('link')}>Work</Link></div>
+  return (
+    <div>
+      { menuBar === true ?
+          <div className={cx('short-back')}>
+            <div className={cx('cross-div')} onClick={() => setMenuBar(false)}><img src={cross} alt="cross" className={cx('cross')}/></div>
+            <div className={cx('hidden')}>
+              <div className={cx('hidden-about')} onClick={onClickAbout}>About</div>
+              <div className={cx('hidden-work')} onClick={onClickWork}>Work</div>
+            </div>
+          </div>
+          :
+          <div className={cx('menu-back')}>
+            <div className={cx('menu-context')}>
+              <div className={cx('menu-kayin')} onClick={onClickKayin}>Kayin</div>
+              <div className={cx('under-menu')}>
+                <div className={cx('menubar-div')} onClick={() => setMenuBar(true)}><img src={menubar} alt="menubar" className={cx('menubar')}/></div>
+                <div className={cx('work-menu')} onClick={onClickWork}>Work</div>
+                <div className={cx('about-menu')} onClick={onClickAbout}>About</div>
               </div>
             </div>
-            :
-            <div className={cx('menu-back')}>
-              <div className={cx('menu-context')}>
-                <div className={cx('menu-kayin')}><Link to="/" className={cx('link')}>Kayin</Link></div>
-                <div className={cx('under-menu')}>
-                  <div className={cx('menubar-div')} onClick={this.handleClickMenubar}><img src={menubar} alt="menubar" className={cx('menubar')}/></div>
-                  <div className={cx('work-menu')}><Link to="/work" className={cx('link')}>Work</Link></div>
-                  <div className={cx('about-menu')}><Link to="/about" className={cx('link')}>About</Link></div>
-                </div>
-              </div>
-            </div>
-        }
-      </div>
-    );
-  }
+          </div>
+      }
+    </div>
+  );
 }
 
 export default MainMenu;

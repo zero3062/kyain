@@ -23,6 +23,50 @@
     width: 1200px;
     height: 510px;
     background-color: rgba(0, 0, 0, 0.8);
+
+    .write-titleItem {
+        padding: 0px 20px;
+        margin-top: 30px;
+
+      .write-title {
+        width: 960px;
+        padding-left: 20px;
+        height: 30px;
+        font-size: 20px;
+        background-color: inherit;
+        border: 1px solid white;
+        float: left;
+        color: white;
+      }
+
+      .write-cancel, .write-submit {
+        float: left;
+        margin-left: 20px;
+        text-align: center;
+        width: 60px;
+        height: 30px;
+        font-size: 20px;
+        background-color: inherit;
+        color: white;
+        border: 1px solid white;
+        border-radius: 3px;
+      }
+    }
+
+    .write-textItem {
+      padding: 50px 20px;
+
+      .write-text {
+        resize: none;
+        background-color: inherit;
+        border: 1px solid white;
+        color: white;
+        font-size: 20px;
+        width: 1100px;
+        height: 360px;
+        padding: 20px;
+      }
+    }
   }
 }
 
